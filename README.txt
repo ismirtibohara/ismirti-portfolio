@@ -6,7 +6,7 @@ RUN LOCALLY
 3. Edit page text in index.html and colors/layout in style.css.
 
 BEFORE PUBLISHING
-- Confirm the email address in the contact button. It is intentionally left as YOUR_EMAIL_ADDRESS until the address is confirmed.
+- The email button is set to boharasmriti73@gmail.com; confirm it is the address you want public.
 - Your crochet Facebook link has been added; check that it opens the right page.
 - Add your own crochet photographs if you want a photo gallery.
 - Check that every demo and social link works.
