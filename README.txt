@@ -1,24 +1,24 @@
-ISMIRTI BOHARA PORTFOLIO — QUICK START
+ISMIRTI BOHARA — PORTFOLIO
 
-RUN LOCALLY
-1. Open this folder in Visual Studio Code.
-2. Open index.html in a browser, or install the VS Code extension "Live Server" and choose "Open with Live Server".
-3. Edit page text in index.html and colors/layout in style.css.
+RUN THE SITE
+- Open this folder in VS Code.
+- Open index.html in a browser, or use the Live Server extension.
+- Edit text in index.html and visual styles in style.css.
 
-BEFORE PUBLISHING
-- The email button is set to boharasmriti73@gmail.com; confirm it is the address you want public.
-- Your crochet Facebook link has been added; check that it opens the right page.
-- Add your own crochet photographs if you want a photo gallery.
-- Check that every demo and social link works.
+ADD YOUR PHOTOS
+Create an images folder beside index.html and add JPG files with these exact names:
+- portrait.jpg — portrait photo for the home page
+- crochet-1.jpg — main crochet gallery image
+- crochet-2.jpg — close-up/detail image
+- crochet-3.jpg — another crochet piece
 
-PUBLISH TO GITHUB PAGES
-1. On GitHub, create a new empty public repository named ismirti-portfolio. Do not initialize it with a README, license, or .gitignore.
-2. Open this folder in VS Code and open Terminal > New Terminal.
-3. Run these commands from this folder:
-   git push -u origin main
-4. On GitHub, open the repository's Settings > Pages. Under Build and deployment, choose Deploy from a branch, select main and /(root), then Save.
-5. Wait for the Pages deployment to finish and open the site link shown in Settings > Pages.
+If you only have one or two crochet photos, use those slots and leave the others as designed placeholders. Choose photos you are comfortable showing publicly. Keep the subject centered and use clear, well-lit images. The current page has designed placeholders, so missing photos will not show broken-image icons.
 
-If Git asks you to sign in, complete GitHub's browser sign-in flow. Never paste a password or token into this portfolio or a public repository.
+PUBLISH UPDATES TO GITHUB PAGES
+This folder is already connected to the GitHub repository. After changing files or adding images, open Terminal in this folder and run:
+  git add .
+  git commit -m "Refresh portfolio design"
+  git push
 
-This site uses Google Fonts when internet is available and system-font fallbacks offline.
+The live website is:
+https://ismirtibohara.github.io/ismirti-portfolio/
