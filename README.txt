@@ -15,7 +15,6 @@ PUBLISH TO GITHUB PAGES
 1. On GitHub, create a new empty public repository named ismirti-portfolio. Do not initialize it with a README, license, or .gitignore.
 2. Open this folder in VS Code and open Terminal > New Terminal.
 3. Run these commands from this folder:
-   git remote add origin https://github.com/ismirtibohara/ismirti-portfolio.git
    git push -u origin main
 4. On GitHub, open the repository's Settings > Pages. Under Build and deployment, choose Deploy from a branch, select main and /(root), then Save.
 5. Wait for the Pages deployment to finish and open the site link shown in Settings > Pages.
