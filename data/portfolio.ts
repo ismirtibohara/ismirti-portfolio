@@ -75,6 +75,7 @@ export const stack = [
 
 export const crochet = {
   title: "Handmade crochet top",
+  alt: "Handmade crocheted top created by Ismirti Bohara",
   link: profile.links.facebookCrochet,
 };
 

@@ -1,7 +1,9 @@
-import { ArrowUpRight, FileSearch, Flower2, PanelsTopLeft, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, FileSearch, PanelsTopLeft, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { crochet, projects } from "@/data/portfolio";
+import { basePath } from "@/lib/utils";
 
 const projectIcons = { rag: FileSearch, grades: TrendingUp, blog: PanelsTopLeft };
 
@@ -24,9 +26,9 @@ export function WorkSection() {
           );
         })}
         <Card className="project-card overflow-hidden border-border/80 bg-card shadow-none transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
-          <a href={crochet.link} target="_blank" rel="noreferrer" className="relative flex aspect-[16/8] flex-col items-center justify-center gap-3 overflow-hidden bg-gradient-to-br from-stone-800 via-neutral-800 to-stone-700" aria-label="View Ismirti's crochet page">
-            <Flower2 size={42} strokeWidth={1.1} className="text-stone-300" aria-hidden="true" />
-            <span className="rounded-full border border-white/15 bg-black/20 px-3 py-1 text-[10px] text-stone-200">Creative practice · crochet</span>
+          <a href={crochet.link} target="_blank" rel="noreferrer" className="relative block aspect-[16/8] overflow-hidden bg-secondary" aria-label="View Ismirti's crochet page">
+            <Image src={`${basePath}/images/crochet-1.jpg`} alt={crochet.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 hover:scale-[1.03]" />
+            <span className="absolute bottom-3 left-3 rounded-full bg-background/90 px-3 py-1 text-[10px] text-foreground">Creative practice</span>
           </a>
           <CardContent className="p-5 md:p-6"><p className="text-base font-semibold tracking-tight">{crochet.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">A handmade piece from my crochet practice, where patience and pattern come together.</p><a className="mt-4 inline-flex items-center gap-1 text-xs font-medium hover:underline" href={crochet.link} target="_blank" rel="noreferrer">See more crochet work <ArrowUpRight size={13} /></a></CardContent>
         </Card>
