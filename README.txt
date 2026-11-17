@@ -1,24 +1,35 @@
-ISMIRTI BOHARA — PORTFOLIO
+# Ismirti Bohara — Portfolio
 
-RUN THE SITE
-- Open this folder in VS Code.
-- Open index.html in a browser, or use the Live Server extension.
-- Edit text in index.html and visual styles in style.css.
+A responsive portfolio built with Next.js App Router, TypeScript, Tailwind CSS v4, and reusable shadcn/ui-style primitives.
 
-ADD YOUR PHOTOS
-Create an images folder beside index.html and add JPG files with these exact names:
-- portrait.jpg — portrait photo for the home page
-- crochet-1.jpg — main crochet gallery image
-- crochet-2.jpg — close-up/detail image
-- crochet-3.jpg — another crochet piece
+## Run locally
 
-If you only have one or two crochet photos, use those slots and leave the others as designed placeholders. Choose photos you are comfortable showing publicly. Keep the subject centered and use clear, well-lit images. The current page has designed placeholders, so missing photos will not show broken-image icons.
+Requires Node.js 20.9 or newer.
 
-PUBLISH UPDATES TO GITHUB PAGES
-This folder is already connected to the GitHub repository. After changing files or adding images, open Terminal in this folder and run:
-  git add .
-  git commit -m "Refresh portfolio design"
-  git push
+```bash
+npm install
+npm run dev
+```
 
-The live website is:
-https://ismirtibohara.github.io/ismirti-portfolio/
+Open http://localhost:3000. Edit profile and project content in `data/portfolio.ts`. Page sections live in `components/sections/`; shared styles and design tokens are in `app/globals.css`.
+
+## Photos
+
+- `public/images/portrait.jpg` — hero portrait
+- `public/images/crochet-1.jpg` — handmade crochet top
+
+Replace those files with photos you want to show publicly. Keep the same filenames or update the paths in `data/portfolio.ts`.
+
+## Sections
+
+Hero → Experience → Work & Projects → Education → Stack & Interests → GitHub Contributions → Templates & Resources → Writing → Connect.
+
+The experience, templates, and writing content is intentionally modest and honest. Add internships, resources, or posts when you have them.
+
+## GitHub Pages deployment
+
+This project uses Next.js static export so it can be hosted on GitHub Pages. The workflow is `.github/workflows/deploy.yml`.
+
+In the repository, open **Settings → Pages** and set the source to **GitHub Actions**. Push changes to `main`; the workflow builds the static files and deploys them. The live project URL is `https://ismirtibohara.github.io/ismirti-portfolio/`.
+
+The GitHub Pages subpath is handled by `next.config.ts`; local development uses the root path.
