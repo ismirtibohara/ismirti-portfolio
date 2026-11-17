@@ -24,9 +24,9 @@ export function WorkSection() {
           );
         })}
         <Card className="project-card overflow-hidden border-border/80 bg-card shadow-none transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
-          <a href={crochet.link} target="_blank" rel="noreferrer" className="relative flex aspect-[16/8] flex-col items-center justify-center gap-3 overflow-hidden bg-gradient-to-br from-stone-200 via-neutral-100 to-stone-300" aria-label="View Ismirti's crochet page">
-            <Flower2 size={42} strokeWidth={1.1} className="text-stone-500" aria-hidden="true" />
-            <span className="rounded-full border border-stone-400/60 bg-white/60 px-3 py-1 text-[10px] text-stone-600">Creative practice · crochet</span>
+          <a href={crochet.link} target="_blank" rel="noreferrer" className="relative flex aspect-[16/8] flex-col items-center justify-center gap-3 overflow-hidden bg-gradient-to-br from-stone-800 via-neutral-800 to-stone-700" aria-label="View Ismirti's crochet page">
+            <Flower2 size={42} strokeWidth={1.1} className="text-stone-300" aria-hidden="true" />
+            <span className="rounded-full border border-white/15 bg-black/20 px-3 py-1 text-[10px] text-stone-200">Creative practice · crochet</span>
           </a>
           <CardContent className="p-5 md:p-6"><p className="text-base font-semibold tracking-tight">{crochet.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">A handmade piece from my crochet practice, where patience and pattern come together.</p><a className="mt-4 inline-flex items-center gap-1 text-xs font-medium hover:underline" href={crochet.link} target="_blank" rel="noreferrer">See more crochet work <ArrowUpRight size={13} /></a></CardContent>
         </Card>

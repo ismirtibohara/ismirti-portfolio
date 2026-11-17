@@ -1,6 +1,6 @@
 # Ismirti Bohara — Portfolio
 
-A responsive portfolio built with Next.js App Router, TypeScript, Tailwind CSS v4, and reusable shadcn/ui-style primitives.
+A responsive dark-theme portfolio built with Next.js App Router, TypeScript, Tailwind CSS v4, and reusable shadcn/ui-style primitives.
 
 ## Run locally
 
