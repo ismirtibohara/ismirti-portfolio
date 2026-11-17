@@ -13,12 +13,9 @@ npm run dev
 
 Open http://localhost:3000. Edit profile and project content in `data/portfolio.ts`. Page sections live in `components/sections/`; shared styles and design tokens are in `app/globals.css`.
 
-## Photos
+## Images
 
-- `public/images/portrait.jpg` — hero portrait
-- `public/images/crochet-1.jpg` — handmade crochet top
-
-Replace those files with photos you want to show publicly. Keep the same filenames or update the paths in `data/portfolio.ts`.
+The portfolio currently uses no personal photos. Its hero and crochet project visuals are made with text, CSS, and icons.
 
 ## Sections
 

@@ -75,8 +75,6 @@ export const stack = [
 
 export const crochet = {
   title: "Handmade crochet top",
-  image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/crochet-1.jpg`,
-  alt: "A handmade brown crochet top with decorative stitching by Ismirti Bohara",
   link: profile.links.facebookCrochet,
 };
 

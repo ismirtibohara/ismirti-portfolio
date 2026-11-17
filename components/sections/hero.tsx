@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Github, MapPin } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github, MapPin, Sparkles } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
-import { basePath } from "@/lib/utils";
 import { profile } from "@/data/portfolio";
 
 export function HeroSection() {
@@ -19,11 +17,10 @@ export function HeroSection() {
         </div>
         <p className="mt-8 text-xs text-muted-foreground">Currently in my fifth semester at Padma Kanya Multiple Campus.</p>
       </div>
-      <div className="portrait-shell mx-auto w-full max-w-[210px] md:mx-0 md:max-w-none">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm">
-          <Image src={`${basePath}/images/portrait.jpg`} alt="Portrait of Ismirti Bohara" fill priority sizes="(max-width: 768px) 180px, 220px" className="object-cover object-[center_35%]" />
-        </div>
-        <p className="mt-3 text-center text-[11px] text-muted-foreground">Curious by nature · learning by building</p>
+      <div className="mx-auto flex aspect-[4/5] w-full max-w-[210px] flex-col justify-between rounded-2xl border border-border bg-secondary p-5 shadow-sm md:mx-0 md:max-w-none">
+        <div className="flex items-center justify-between text-muted-foreground"><span className="text-[10px] uppercase tracking-[0.16em]">A work in progress</span><Sparkles size={15} aria-hidden="true" /></div>
+        <div><span className="text-6xl font-semibold tracking-[-0.08em] text-foreground/80">IB</span><p className="mt-3 text-sm font-medium">Learning by building</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Applied AI · CSIT · creative practice</p></div>
+        <span className="text-[9px] uppercase tracking-[0.14em] text-muted-foreground">Kathmandu, Nepal</span>
       </div>
     </section>
   );
