@@ -1,30 +1,57 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Github, MapPin } from "lucide-react";
-import { ButtonLink } from "@/components/ui/button";
+import { FileText, Github, Mail } from "lucide-react";
+import { HeroShortcuts } from "@/components/hero-shortcuts";
 import { basePath } from "@/lib/utils";
 import { profile } from "@/data/portfolio";
 
+const email = "boharasmriti73@gmail.com";
+const hasCv = false; // change to true after you add your CV file
+const cvPath = `${basePath}/Ismirti_Bohara_CV.pdf`;
+
 export function HeroSection() {
   return (
-    <section id="top" className="section-wrap grid gap-9 py-16 md:grid-cols-[1fr_220px] md:items-center md:gap-14 md:py-24">
-      <div>
-        <p className="mb-5 inline-flex items-center gap-2 text-xs text-muted-foreground"><MapPin size={13} aria-hidden="true" /> {profile.location} <span className="text-border">/</span> BSc CSIT · Year 3</p>
-        <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-5xl md:text-6xl">
-          Learning to build <span className="text-muted-foreground">useful things</span> with applied AI.
-        </h1>
-        <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-muted-foreground">{profile.intro}</p>
-        <div className="mt-7 flex flex-wrap items-center gap-3">
-          <ButtonLink href="#work" size="lg">Explore projects <ArrowDown size={15} aria-hidden="true" /></ButtonLink>
-          <ButtonLink href={profile.links.github} variant="outline" size="lg" target="_blank" rel="noreferrer"><Github size={15} aria-hidden="true" /> GitHub <ArrowUpRight size={14} aria-hidden="true" /></ButtonLink>
+    <section id="top" className="section-wrap py-14 md:py-24">
+      <div className="flex flex-col gap-8 sm:flex-row-reverse sm:items-center sm:justify-between sm:gap-10">
+        <div className="relative mx-auto aspect-[4/5] w-60 shrink-0 overflow-hidden rounded-2xl border border-border bg-secondary sm:mx-0 sm:w-64 md:w-80">
+          <Image
+            src={`${basePath}/images/portrait.jpg`}
+            alt="Portrait of Ismirti Bohara"
+            fill
+            priority
+            sizes="(max-width: 640px) 240px, (max-width: 768px) 256px, 320px"
+            className="object-cover object-[center_30%]"
+          />
         </div>
-        <p className="mt-8 text-xs text-muted-foreground">Currently in my fifth semester at Padma Kanya Multiple Campus.</p>
-      </div>
-      <div className="portrait-shell mx-auto w-full max-w-[210px] md:mx-0 md:max-w-none">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm">
-          <Image src={`${basePath}/images/portrait.jpg`} alt="Portrait of Ismirti Bohara" fill priority sizes="(max-width: 768px) 180px, 220px" className="object-cover object-[center_35%]" />
+
+        <div className="min-w-0 flex-1">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{profile.name}</h1>
+          <p className="mt-2 text-sm text-muted-foreground">
+            BSc CSIT student exploring applied AI &amp; machine learning
+          </p>
+          <p className="mt-4 max-w-xl text-pretty leading-7 text-muted-foreground">
+            I&apos;m a third-year BSc CSIT student at Padma Kanya Multiple Campus in Kathmandu, interested in
+            applied AI and machine learning. I learn by building: a PDF search assistant using retrieval, a
+            student grade predictor, and a few web projects. Away from the keyboard, I crochet handmade
+            pieces, and I like improving everything one version at a time.
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <a href={`mailto:${email}`} className="hero-link">
+              <Mail size={15} aria-hidden="true" /> Email <kbd className="kbd">E</kbd>
+            </a>
+            <a href={profile.links.github} target="_blank" rel="noreferrer" className="hero-link">
+              <Github size={15} aria-hidden="true" /> GitHub <kbd className="kbd">G</kbd>
+            </a>
+            {hasCv && (
+              <a href={cvPath} target="_blank" rel="noreferrer" className="hero-link">
+                <FileText size={15} aria-hidden="true" /> CV <kbd className="kbd">R</kbd>
+              </a>
+            )}
+          </div>
         </div>
-        <p className="mt-3 text-center text-[11px] text-muted-foreground">Curious by nature · learning by building</p>
       </div>
+
+      <HeroShortcuts email={email} github={profile.links.github} cv={hasCv ? cvPath : undefined} />
     </section>
   );
 }

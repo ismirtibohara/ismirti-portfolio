@@ -129,3 +129,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ring); outline-
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* about / hero links with key hints */
+.hero-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted-foreground); transition: color .18s ease; }
+.hero-link:hover { color: var(--foreground); }
+.kbd { display: inline-grid; place-items: center; min-width: 1.4rem; height: 1.4rem; padding-inline: .35rem; border-radius: .4rem; background: var(--secondary); color: var(--muted-foreground); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: .7rem; }
