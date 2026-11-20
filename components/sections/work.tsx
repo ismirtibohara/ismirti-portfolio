@@ -1,9 +1,7 @@
-import Image from "next/image";
-import { ArrowUpRight, FileSearch, PanelsTopLeft, TrendingUp } from "lucide-react";
+import { ArrowUpRight, FileSearch, Heart, PanelsTopLeft, TrendingUp } from "lucide-react";
 import { TechBadge } from "@/components/tech-icon";
 import { Card, CardContent } from "@/components/ui/card";
 import { crochet, projects } from "@/data/portfolio";
-import { basePath } from "@/lib/utils";
 
 const projectIcons = { rag: FileSearch, grades: TrendingUp, blog: PanelsTopLeft };
 
@@ -26,11 +24,11 @@ export function WorkSection() {
           );
         })}
         <Card className="project-card overflow-hidden border-border/80 bg-card shadow-none transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
-          <a href={crochet.link} target="_blank" rel="noreferrer" className="relative block aspect-[16/8] overflow-hidden bg-secondary" aria-label="View Ismirti's crochet page">
-            <Image src={`${basePath}/images/crochet-1.jpg`} alt={crochet.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 hover:scale-[1.03]" />
-            <span className="absolute bottom-3 left-3 rounded-full bg-background/90 px-3 py-1 text-[10px] text-foreground">Creative practice</span>
-          </a>
-          <CardContent className="p-5 md:p-6"><p className="text-base font-semibold tracking-tight">{crochet.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">A handmade piece from my crochet practice, where patience and pattern come together.</p><a className="mt-4 inline-flex items-center gap-1 text-xs font-medium hover:underline" href={crochet.link} target="_blank" rel="noreferrer">See more crochet work <ArrowUpRight size={13} /></a></CardContent>
+          <div className="project-visual project-visual-rag"><div className="project-visual-label"><span>04</span><span>CREATIVE · HANDMADE</span></div><div className="project-visual-mark"><Heart size={29} strokeWidth={1.3} /></div><span className="project-visual-orbit" aria-hidden="true" /></div>
+          <CardContent className="p-5 md:p-6">
+            <div className="flex items-start justify-between gap-3"><div><p className="text-base font-semibold tracking-tight">{crochet.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">A handmade piece from my crochet practice, where patience and pattern come together.</p></div><span className="text-xs text-muted-foreground">04</span></div>
+            <div className="mt-5 flex gap-4 text-xs font-medium"><a className="inline-flex items-center gap-1 hover:underline" href={crochet.link} target="_blank" rel="noreferrer">See more crochet work <ArrowUpRight size={13} /></a></div>
+          </CardContent>
         </Card>
       </div>
     </section>

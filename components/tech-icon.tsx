@@ -1,4 +1,7 @@
-const icons: Record<string, string> = {
+import { Bot, Brain, Database, FileText, type LucideIcon } from "lucide-react";
+// import { basePath } from "@/lib/utils"; // uncomment if you add your own logo files (see note below)
+
+const fontIcons: Record<string, string> = {
   python: "devicon-python-plain colored",
   c: "devicon-c-plain colored",
   "c++": "devicon-cplusplus-plain colored",
@@ -11,16 +14,39 @@ const icons: Record<string, string> = {
   "github pages": "devicon-github-original colored",
 };
 
-export function TechBadge({ name }: { name: string }) {
-  const icon = icons[name.toLowerCase()];
+const imageLogos: Record<string, string> = {
+  streamlit: "https://cdn.simpleicons.org/streamlit/FF4B4B",
+  // chromadb: `${basePath}/logos/chromadb.png`,
+  // pypdf: `${basePath}/logos/pypdf.png`,
+};
 
-  if (!icon) {
+const genericIcons: Record<string, LucideIcon> = {
+  chromadb: Database,
+  pypdf: FileText,
+  "machine learning": Brain,
+  "applied ai": Bot,
+};
+
+export function TechBadge({ name }: { name: string }) {
+  const key = name.toLowerCase();
+  const fontIcon = fontIcons[key];
+  const imageLogo = imageLogos[key];
+  const GenericIcon = genericIcons[key];
+
+  if (!fontIcon && !imageLogo && !GenericIcon) {
     return <span className="tech-text">{name}</span>;
   }
 
   return (
     <span className="tech-chip" title={name}>
-      <i className={icon} aria-hidden="true" />
+      {fontIcon ? (
+        <i className={fontIcon} aria-hidden="true" />
+      ) : imageLogo ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={imageLogo} alt="" width={24} height={24} />
+      ) : GenericIcon ? (
+        <GenericIcon size={20} className="text-stone-700" aria-hidden="true" />
+      ) : null}
       <span className="sr-only">{name}</span>
     </span>
   );
