@@ -134,3 +134,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ring); outline-
 .hero-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted-foreground); transition: color .18s ease; }
 .hero-link:hover { color: var(--foreground); }
 .kbd { display: inline-grid; place-items: center; min-width: 1.4rem; height: 1.4rem; padding-inline: .35rem; border-radius: .4rem; background: var(--secondary); color: var(--muted-foreground); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: .7rem; }
+/* remove 01 / 02 section numbering */
+.section-index { display: none; }
+.section-heading-row { grid-template-columns: minmax(0, 1fr) auto; }
+
+@media (max-width: 640px) {
+  .section-heading-row { grid-template-columns: minmax(0, 1fr); }
+  .section-heading-row > .section-aside-link { grid-column: 1; }
+}
