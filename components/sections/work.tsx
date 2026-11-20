@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight, FileSearch, PanelsTopLeft, TrendingUp } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { TechBadge } from "@/components/tech-icon";
 import { Card, CardContent } from "@/components/ui/card";
 import { crochet, projects } from "@/data/portfolio";
 import { basePath } from "@/lib/utils";
@@ -19,7 +19,7 @@ export function WorkSection() {
               <div className={`project-visual project-visual-${project.visual}`}><div className="project-visual-label"><span>{project.number}</span><span>{project.kind}</span></div><div className="project-visual-mark"><Icon size={29} strokeWidth={1.3} /></div><span className="project-visual-orbit" aria-hidden="true" /></div>
               <CardContent className="p-5 md:p-6">
                 <div className="flex items-start justify-between gap-3"><div><p className="text-base font-semibold tracking-tight">{project.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">{project.description}</p></div><span className="text-xs text-muted-foreground">{project.number}</span></div>
-                <div className="mt-4 flex flex-wrap gap-1.5">{project.stack.map((skill) => <Badge key={skill} variant="outline" className="font-normal text-[10px] text-muted-foreground">{skill}</Badge>)}</div>
+                <div className="mt-4 flex flex-wrap items-center gap-2">{project.stack.map((skill) => <TechBadge key={skill} name={skill} />)}</div>
                 <div className="mt-5 flex gap-4 text-xs font-medium"><a className="inline-flex items-center gap-1 hover:underline" href={project.demo} target="_blank" rel="noreferrer">Live project <ArrowUpRight size={13} /></a>{project.source && <a className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline" href={project.source} target="_blank" rel="noreferrer">Source code <ArrowUpRight size={13} /></a>}</div>
               </CardContent>
             </Card>
