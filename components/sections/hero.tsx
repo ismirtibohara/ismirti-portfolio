@@ -29,10 +29,10 @@ export function HeroSection() {
             BSc CSIT student exploring applied AI &amp; machine learning
           </p>
           <p className="mt-4 max-w-xl text-pretty leading-7 text-muted-foreground">
-            I&apos;m a third-year BSc CSIT student at Padma Kanya Multiple Campus in Kathmandu, interested in
-            applied AI and machine learning. I learn by building: a PDF search assistant using retrieval, a
-            student grade predictor, and a few web projects. Away from the keyboard, I crochet handmade
-            pieces, and I like improving everything one version at a time.
+            I&apos;m a third-year BSc CSIT student at Padma Kanya Multiple Campus, Kathmandu, focused on AI and
+            machine learning. I learn by building: a PDF search assistant powered by retrieval, a student grade
+            predictor, and several web projects. Outside of code, I crochet handmade pieces, which taught me
+            patience, attention to detail, and the habit of improving things one version at a time.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
