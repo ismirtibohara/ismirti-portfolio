@@ -26,7 +26,7 @@ export function HeroSection() {
         <div className="min-w-0 flex-1">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{profile.name}</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            BSc CSIT student exploring applied AI &amp; machine learning
+            BSc CSIT student exploring AI &amp; machine learning
           </p>
           <p className="mt-4 max-w-xl text-pretty leading-7 text-muted-foreground">
             I&apos;m a third-year BSc CSIT student at Padma Kanya Multiple Campus, Kathmandu, focused on AI and
