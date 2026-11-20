@@ -12,13 +12,13 @@ export function HeroSection() {
   return (
     <section id="top" className="section-wrap py-14 md:py-24">
       <div className="flex flex-col gap-8 sm:flex-row-reverse sm:items-center sm:justify-between sm:gap-10">
-        <div className="relative mx-auto aspect-[4/5] w-60 shrink-0 overflow-hidden rounded-2xl border border-border bg-secondary sm:mx-0 sm:w-64 md:w-80">
+        <div className="relative mx-auto aspect-[4/5] w-44 shrink-0 overflow-hidden rounded-2xl border border-border bg-secondary sm:mx-0 sm:w-48 md:w-56">
           <Image
             src={`${basePath}/images/portrait.jpg`}
             alt="Portrait of Ismirti Bohara"
             fill
             priority
-            sizes="(max-width: 640px) 240px, (max-width: 768px) 256px, 320px"
+            sizes="(max-width: 640px) 176px, (max-width: 768px) 192px, 224px"
             className="object-cover object-[center_30%]"
           />
         </div>
